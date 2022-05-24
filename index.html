@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập mảng</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container w-50 mt-3">
+      <div class="topLY">
+        <form>
+          <div class="form-group">
+            <input
+              type="number"
+              class="form-control w-50"
+              id="numN"
+              placeholder="Nhập số n"
+            />
+            <button onclick="themSo()" type="button" class="btn btn-primary">
+              Thêm số
+            </button>
+          </div>
+
+          <p class="alert alert-info mt-3" id="hienThi1">
+            <i class="fa fa-hand-point-right"></i>
+          </p>
+        </form>
+      </div>
+      <div class="bottomLY">
+        <div class="exp">
+          <nav class="navbar navbar-dark bg-success bnp">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarToggleExternalContent"
+              aria-controls="navbarToggleExternalContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="text-white">1</span>
+            </button>
+            <span class="text-white">Tổng số dương</span>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-dark p-4">
+              <button onclick="tongSoDuong()" class="btn btn-info">Tính tổng</button>
+              <p class="alert alert-info mt-3" id="hienThi2">
+                <i class="fa fa-hand-point-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="exp">
+          <nav class="navbar navbar-dark bg-success bnp">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarToggleExternalContent2"
+              aria-controls="navbarToggleExternalContent2"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="text-white">2</span>
+            </button>
+            <span class="text-white">Đếm số dương</span>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent2">
+            <div class="bg-dark p-4">
+              <button onclick="demSoDuong()" class="btn btn-info">Đếm số</button>
+              <p class="alert alert-info mt-3" id="hienThi3">
+                <i class="fa fa-hand-point-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="exp">
+          <nav class="navbar navbar-dark bg-success bnp">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarToggleExternalContent3"
+              aria-controls="navbarToggleExternalContent3"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="text-white">3</span>
+            </button>
+            <span class="text-white">Tìm số nhỏ nhất</span>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent3">
+            <div class="bg-dark p-4">
+              <button onclick="soNhoNhat()" class="btn btn-info">Tìm số nhỏ nhất</button>
+              <p class="alert alert-info mt-3" id="hienThi4">
+                <i class="fa fa-hand-point-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="exp">
+          <nav class="navbar navbar-dark bg-success bnp">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarToggleExternalContent4"
+              aria-controls="navbarToggleExternalContent4"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="text-white">4</span>
+            </button>
+            <span class="text-white">Tìm số dương nhỏ nhất</span>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent4">
+            <div class="bg-dark p-4">
+              <button onclick="soDuongNhoNhat()" class="btn btn-info">Tìm số dương nhỏ nhất</button>
+              <p class="alert alert-info mt-3" id="hienThi5">
+                <i class="fa fa-hand-point-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="exp">
+          <nav class="navbar navbar-dark bg-success bnp">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarToggleExternalContent5"
+              aria-controls="navbarToggleExternalContent5"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="text-white">5</span>
+            </button>
+            <span class="text-white">Tìm số chẵn cuối cùng</span>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent5">
+            <div class="bg-dark p-4">
+              <button onclick="soChanCuoiCung()" class="btn btn-info">Tìm số chẵn</button>
+              <p class="alert alert-info mt-3" id="hienThi6">
+                <i class="fa fa-hand-point-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="exp">
+          <nav class="navbar navbar-dark bg-success bnp">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarToggleExternalContent6"
+              aria-controls="navbarToggleExternalContent6"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="text-white">6</span>
+            </button>
+            <span class="text-white">Đổi chổ</span>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent6">
+            <div class="bg-dark p-4">
+              <div class="viTri">
+                <input type="number" class="alert alert-info" placeholder="Nhập số vị trí 1" id="inpVT1">
+                <input type="number" class="alert alert-info" placeholder="Nhập số vị trí 2" id="inpVT2">
+              </div>
+              <button onclick="doiCho()" class="btn btn-info">Đổi chổ</button>
+              <p class="alert alert-info mt-3" id="hienThi7">
+                <i class="fa fa-hand-point-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="exp">
+          <nav class="navbar navbar-dark bg-success bnp">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarToggleExternalContent7"
+              aria-controls="navbarToggleExternalContent7"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="text-white">7</span>
+            </button>
+            <span class="text-white">Sắp xếp tăng dần</span>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent7">
+            <div class="bg-dark p-4">
+              <button onclick="sapXepTangDan()" class="btn btn-info">Sắp xếp</button>
+              <p class="alert alert-info mt-3" id="hienThi8">
+                <i class="fa fa-hand-point-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="exp">
+          <nav class="navbar navbar-dark bg-success bnp">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarToggleExternalContent8"
+              aria-controls="navbarToggleExternalContent8"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="text-white">8</span>
+            </button>
+            <span class="text-white">Tìm số nguyên tố đầu tiên</span>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent8">
+            <div class="bg-dark p-4">
+              <button onclick="soNguyenToDT()" class="btn btn-info">Tìm số nguyên tố</button>
+              <p class="alert alert-info mt-3" id="hienThi9">
+                <i class="fa fa-hand-point-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="exp">
+          <nav class="navbar navbar-dark bg-success bnp">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarToggleExternalContent9"
+              aria-controls="navbarToggleExternalContent9"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="text-white">9</span>
+            </button>
+            <span class="text-white">Đếm số nguyên</span>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent9">
+            <div class="bg-dark p-4">
+              <div class="form-group">
+                <input type="number" id="inpSoNguyen">
+                <button onclick="themSo2()" class="btn btn-info">Thêm số</button>
+              </div>
+              <p class="alert - alert-info" id="hienThi10">
+                <i class="fa fa-hand-point-right"></i>
+              </p>
+              <button onclick="demSoNguyen()" class="btn btn-info">Đếm số nguyên</button>
+              <p class="alert alert-info mt-3" id="hienThi11">
+                <i class="fa fa-hand-point-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="exp">
+          <nav class="navbar navbar-dark bg-success bnp">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarToggleExternalContent10"
+              aria-controls="navbarToggleExternalContent10"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="text-white">10</span>
+            </button>
+            <span class="text-white">So sánh số lượng số âm và số dương</span>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent10">
+            <div class="bg-dark p-4">
+              <button onclick="soSanh()" class="btn btn-info">So sánh</button>
+              <p class="alert alert-info mt-3" id="hienThi12">
+                <i class="fa fa-hand-point-right"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/baiTapMang.js"></script>
+  </body>
+</html>

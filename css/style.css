@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bnp{
+    justify-content: flex-start;
+    border-bottom: 1px solid darkslategray;
+}
+.form-group{
+    display: flex;
+}
+.form-group button{
+    margin-left: 20px;
+}
+.viTri{
+    display: flex;
+    justify-content: space-between;
+}
+.viTri input{
+    width: 45%;
+}
